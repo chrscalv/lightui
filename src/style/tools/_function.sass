@@ -1,0 +1,23 @@
+@use 'sass:list'
+@use 'sass:map'
+@use 'sass:math'
+@use 'sass:meta'
+
+@function get-media-scren()
+  
+  @return value
+
+@function map-deep-merge($parent-map,$child-map )
+  $return: $parent-map
+  @each $key,$child in $child-map
+    $parent-key: map.has-key($result,$key )
+    $paren-value: map.get($result,$key )
+    $parent-type: meta.type-of($parent-value)
+    $child-type:  meta.type-of($child)
+  
+  @if (not $parent-key) or ($parent-key != $child-type)
+    $result: map.merge($result,($key, $child) )
+  @else  
+    $result: map.merge($result,($key, $child) )
+      
+  @return $result

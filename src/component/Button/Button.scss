@@ -1,0 +1,28 @@
+@import '../../style/main.scss';
+
+.light-button {
+  padding: 10px 30px;
+  max-width: max-content;
+  max-height: max-content;
+  border: $border;
+  border-radius: $rounded;
+
+  &__outlined {
+    border: 1px;
+    color: blue;
+    background-color: white;
+  }
+
+  &__link {
+    border: 0px;
+    color: blue;
+  }
+
+  &__disabled {
+    background-color: grey;
+  }
+
+  &:hover {
+    color: blue
+  }
+}
